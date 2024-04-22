@@ -55,8 +55,7 @@ const Projects = () => {
       id: "tab-1",
       title: "Health Insurance PPC",
       content:
-        `We run a successful health insurance campaign, it is important to establish and monitor key performance indicators (KPIs), test for quality assurance, and recognize the audience's needs when creating effective call-to-actions. healthcare call centres need to overcome challenges such as understanding insurance and seeking treatment. best practices for new patients include identifying and documenting goals, starting migration in small steps, providing proper onboarding, and using technology to improve patient experience.
-        Inbound call generation for health insurance achieved through high intent health insurance exclusive inbound calls primarily driven by search, display, and native ad placements offering a new service or product during an inbound call can make the customer feel special and generate high-quality leads. sales techniques that increase success on health insurance inbound calls include knowing your customer, asking the right questions and keeping it simple, building rapport with the customer, and being prepared to handle objections. our Insurance agents are driving inbound calls by using tips such as creating a sense of urgency in their messaging and offering free quotes or consultations.`,
+        `To run a successful health insurance campaign, it is important to establish and monitor key performance indicators (KPIs), test for quality assurance, and recognize the audience's needs when creating effective calls to action. Healthcare call centers need to overcome challenges such as understanding insurance and seeking treatment. Best practices for new patients include identifying and documenting goals, starting migration in small steps, providing proper onboarding, and using technology to improve the patient experience..........`,
       imgSrc: "images/tabs-1.jpg",
       Link:"/HealthInsurance"
     },
@@ -64,8 +63,8 @@ const Projects = () => {
       id: "tab-2",
       title: "Final Expense",
       content:
-        `Click to call lead generation is a tactic used in inbound marketing strategies. It involves using a dedicated Facebook call capture/tracking phone number to generate leads from Facebook Ads Business Nucleus offers click-to-call as part of their marketing services, Other effective strategies for lead generation include webinars, SEO, and content marketing.
-        The strategies for click to call lead generation include creating a new lead generation campaign in Ads Manager and selecting phone as the "lead method" under the ad set settings Using a dedicated Facebook call capture/tracking phone number is also important for generating leads from call now ad units Click-to-call is an effective tactic offered by Business Nucleus as part of their marketing services.`,
+        `Click-to-call lead generation is a tactic used in inbound marketing strategies. It involves using a dedicated Facebook call capture/tracking phone number to generate leads from Facebook Ads Business Nucleus offers click-to-call as part of their marketing services. Other effective strategies for lead generation include webinars, SEO, and content marketing.
+        The strategies for click-to-call lead generation include creating a new lead generation campaign in Ads Manager and selecting phone as the "lead method" under the ad set settings Using a dedicated Facebook call capture/tracking phone number is also important for generating leads from call-now ad units Business Nucleus offers click-to-call as an effective tactic within their marketing services........`,
       imgSrc: "images/tabs-2.jpg",
       Link:"/FinalExpense"
     },
@@ -73,8 +72,7 @@ const Projects = () => {
       id: "tab-3",
       title: "Medicare Supplement",
       content:
-        `We run a Medicare supplement and advantage campaign, custom calling campaigns can be created for live transfer leads, sales scripts can also use to effectively sell Medicare insurance and set appointments with potential customers live transfer sales leads for Medicare supplement is purchased from call centre providers top vendors for Medicare supplement and advantage leads include those that offer call centre telesales and custom marketing campaign.
-        Inbound call generation for Medicare supplement and advantage achieved through a combination of outbound and inbound marketing tactics such as email marketing, real-time inbound phone calls, remarketing, seminars, and in-person events, agents can also generate their own Medicare leads by using outbound/inbound phone calls, direct mail campaigns, digital advertising, and social media outreach.`,
+        `We run a Medicare supplement and advantage campaign. Custom calling campaigns can be created for live transfer leads, and sales scripts can also be used to effectively sell Medicare insurance and set appointments with potential customers Live transfer sales leads for Medicare supplements are purchased from call center providers and top vendors for Medicare supplements and advantage leads include those that offer call center telesales and custom marketing campaigns........`,
       imgSrc: "images/tabs-3.jpg",
       Link:"/MedicareSupplement"
     },
@@ -82,9 +80,7 @@ const Projects = () => {
       id: "tab-4",
       title: "B2B Lead Generation",
       content:
-        `B2B lead generation is the process of identifying ideal customers for a product or service and attracting them to buy. It is an essential activity for businesses that primarily sell to other businesses demand generation teams share relevant leads with sales, while sales can gain leads directly through their actions such as emailing.
-        B2B marketers like us use various inbound marketing strategies to drive prospective customers to their organization organically. Expert-approved B2B lead generation strategies include content marketing, LinkedIn, well-timed Google Ads, webinars, and email marketing.
-        B2B lead generation strategies include content marketing, LinkedIn, well-timed Google Ads, webinars, email marketing, referral programs, and effective lead capture processes, other B2B lead generation ideas include social media advertising, influencer marketing, account-based marketing (ABM), trade shows and events, and customer reviews to be consistently successful in B2B lead generation, it is important to approach the content strategy from the perspective of the customer and understand what typical B2B buyers are looking for.`,
+        `B2B lead generation is the process of identifying ideal customers for a product or service and attracting them to buy it. It is an essential activity for businesses that primarily sell to other businesses. Demand generation teams share relevant leads with sales, while sales can gain leads directly through their actions, such as emailing. B2B marketers like us use various inbound marketing strategies to drive prospective customers to their organization organically. Expert-approved B2B lead generation strategies include content marketing, LinkedIn, well-timed Google Ads, webinars, and email marketing........`,
         imgSrc: "images/tabs-4.jpg",
         Link:"/B2bGeneration"
     },
