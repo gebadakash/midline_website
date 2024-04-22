@@ -2,8 +2,46 @@ import { BsEnvelope } from 'react-icons/bs';
 import { BiPhoneCall } from "react-icons/bi";
 import { MdShareLocation } from "react-icons/md";
 import "./Contact.css";
+import { useState } from 'react';
+import axios from 'axios';
 
 const Contact = () => {
+
+  const[contact, setContact] = useState({
+
+    username:"",
+    email:"",
+    subject:"",
+    message:"",
+
+  });
+
+  const handleInput = (e) => {
+
+    const name = e.target.name;
+
+    const value = e.target.value;
+
+    setContact({
+      ...contact,
+      [name]: value,
+    });
+
+
+  }
+
+  const handleSubmit = (e) =>{
+
+    e.preventDefault();
+
+    const { username, email, subject, message } = contact;
+
+    axios.post('http://localhost:3001/save', {username,email,subject,message})
+    .then(result => console.log(result))
+    .catch(err=> console.log(err))
+
+  }
+
   return (
     <section id="contact" className="contact">
       <div className="container aos-animate" data-aos="zoom-out-left" data-aos-duration="2000">
@@ -40,20 +78,20 @@ const Contact = () => {
           </div>
 
           <div className="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" className="php-email-form">
+            <form onSubmit={handleSubmit} method="post" role="form" className="php-email-form">
               <div className="row">
                 <div className="col form-group">
-                  <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required />
+                  <input type="text" name="username" className="form-control" id="name" placeholder="Your Name" value={contact.username} onChange={handleInput} required />
                 </div>
                 <div className="col form-group">
-                  <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required />
+                  <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" value={contact.email} onChange={handleInput} required />
                 </div>
               </div>
               <div className="form-group">
-                <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required />
+                <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" value={contact.subject} onChange={handleInput} required />
               </div>
               <div className="form-group">
-                <textarea className="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+                <textarea className="form-control" name="message" rows="8" placeholder="Message" value={contact.message} onChange={handleInput} required></textarea>
               </div>
               <div className="text-center"><button type="submit">Send Message</button></div>
             </form>
