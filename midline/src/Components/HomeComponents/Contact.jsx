@@ -1,6 +1,7 @@
 import { BsEnvelope } from 'react-icons/bs';
 import { BiPhoneCall } from "react-icons/bi";
 import { MdShareLocation } from "react-icons/md";
+import { toast } from 'react-toastify';
 import "./Contact.css";
 import { useState } from 'react';
 import axios from 'axios';
@@ -25,22 +26,33 @@ const Contact = () => {
     setContact({
       ...contact,
       [name]: value,
+      
     });
 
 
   }
 
-  const handleSubmit = (e) =>{
-
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const { username, email, subject, message } = contact;
-
-    axios.post('http://localhost:3001/save', {username,email,subject,message})
-    .then(result => console.log(result))
-    .catch(err=> console.log(err))
-
+  
+    try {
+      const result = await axios.post('http://localhost:3001/save', { username, email, subject, message });
+      console.log(result);
+      toast.success("Thanks for choosing us! Our team will contact you soon.");
+      setContact({
+        username: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+      console.log(error);
+    }
   }
+  
 
   return (
     <section id="contact" className="contact">

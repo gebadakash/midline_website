@@ -1,4 +1,4 @@
-import Video from "../../../public/video/HeaderVideo.mp4";
+import Video from "../../../public/video/CustomerVideo.mp4";
 import "./CarouselSection.css";
 
 const CarouselSection = () => {
