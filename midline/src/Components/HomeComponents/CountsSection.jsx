@@ -64,7 +64,7 @@ const CountBox = ({ icon, count, text }) => {
 const CountsSection = () => {
   const countsData = [
     { icon: <IoHappyOutline />, count: 232, text: 'Happy Clients' },
-    { icon: <IoDocumentTextOutline />, count: 521, text: 'Projects' },
+    { icon: <IoDocumentTextOutline />, count: 5, text: 'Projects' },
     { icon: <IoHeadsetOutline />, count: 1463, text: 'Hours Of Support' },
     { icon: <IoPeopleOutline />, count: 15, text: 'Hard Workers' },
   ];
