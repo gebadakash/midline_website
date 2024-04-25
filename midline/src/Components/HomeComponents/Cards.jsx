@@ -6,12 +6,12 @@ const Cards = () => {
     {
       title: "Our Mission",
       content:
-        "Our vision for cold calling transcends traditional sales tactics. We envision a landscape where every call is an opportunity for authentic connection and meaningful impact. Through empathy, innovation, and a relentless pursuit of excellence, we strive to redefine cold calling as a strategic tool for building lasting relationships and driving sustainable growth. Our vision is to empower businesses to approach cold calling with confidence, knowing that each interaction has the potential to create value and foster trust. Join us in shaping the future of cold calling, where every conversation is a step towards mutual success and prosperity.",
+        "Our vision for cold calling transcends traditional sales tactics. We envision a landscape where every call is an opportunity for authentic connection and meaningful impact. Through empathy, innovation, and a relentless pursuit of excellence, we strive to redefine cold calling as a strategic tool for building lasting relationships and driving sustainable growth. Our vision is to empower businesses to approach cold calling with confidence, knowing that each interaction has the potential to create value and foster trust. Join us in shaping the future of cold calling, where every conversation is a step toward mutual success and prosperity.",
     },
     {
       title: "Our Vision",
       content:
-        "Cold calling isnt just about making sales; its about forging meaningful connections. Our mission is to redefine cold calling as a catalyst for genuine engagement and mutual success. Were committed to understanding client needs, crafting tailored solutions, and fostering trust through empathetic communication. Our vision is to empower businesses to approach cold calling with confidence With a strategic approach and unwavering dedication to excellence, we aim to transform every cold call into an opportunity for growth and partnership. Join us as we revolutionize the way businesses connect and thrive in todays competitive landscape.",
+        "Cold calling isn't just about making sales; it is about forging meaningful connections. Our mission is to redefine cold calling as a platform for genuine engagement and mutual success. We are committed to understanding client needs, crafting personalized solutions, and building trust through empathetic communication. Our vision is to empower businesses to approach cold calling with confidence With an individualized approach and an unwavering dedication to excellence, we aim to transform every cold call into an opportunity for growth and partnership. Join us as we redefine the way businesses connect and thrive in today's competitive landscape.",
     },
   ]);
 

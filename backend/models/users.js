@@ -5,7 +5,9 @@ const UserSchema = new mongoose.Schema({
     username:String,
     email:String,
     subject:String,
-    message:String
+    message:String,
+    contact:String,
+    work:String
 
 })
 

@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const navLinks = [
   { title: "Home", to: "/" },
@@ -63,6 +65,54 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
+  const[formData, setContact] = useState({
+
+    username:"",
+    email:"",
+    contact:"",
+    message:"",
+
+  });
+
+  const handleInput = (e) => {
+
+    const name = e.target.name;
+
+    const value = e.target.value;
+
+    setContact({
+      ...formData,
+      [name]: value,
+      
+    });
+
+
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const { username, email, contact, message } = formData;
+  
+    try {
+      const result = await axios.post('http://localhost:3001/save', { username, email, contact, message });
+      console.log(result);
+      toast.success("Thanks for choosing us! Our team will contact you soon.");
+      setContact({
+        username: "",
+        email: "",
+        contact: "",
+        message: ""
+      });
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+      console.log(error);
+    }
+  }
+
+
 
   return (
     <>
@@ -154,51 +204,57 @@ const Header = () => {
       </nav>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header className="bg-dark">
-          <Modal.Title className="text-white">Quick Contact us</Modal.Title>
+        <Modal.Header className="bg-light">
+          <Modal.Title className="text-dark">Quick Contact us</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="bg-dark">
-          <Form action="send">
+        <Modal.Body className="bg-light">
+          <form onSubmit={handleSubmit} method="post">
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label className="text-white">Full Name</Form.Label>
+              <Form.Label className="text-dark">Full Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Example:Rohan Joshi"
                 required
                 autoFocus
+                name="username"
+                value={formData.username} onChange={handleInput}
               />
-              <Form.Label className="mt-2 text-white">Email address</Form.Label>
+              <Form.Label className="mt-2 text-dark">Email address</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="name@example.com"
                 required
                 autoFocus
+                name="email"
+                value={formData.email} onChange={handleInput}
               />
-              <Form.Label className="mt-2 text-white">Phone number</Form.Label>
+              <Form.Label className="mt-2 text-dark">Phone number</Form.Label>
               <Form.Control
-                type="Number"
+                type="text"
                 placeholder="Example:+91 666654456"
                 required
                 autoFocus
+                name="contact"
+                value={formData.contact} onChange={handleInput}
               />
             </Form.Group>
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label className="text-white">Message</Form.Label>
-              <Form.Control as="textarea" rows={3} required />
+              <Form.Label className="text-dark">Message</Form.Label>
+              <Form.Control as="textarea"  name="message" value={formData.message} onChange={handleInput} rows={3} required />
             </Form.Group>
-
-            <Modal.Footer className="bg-dark">
+ 
+            <Modal.Footer className="bg-light">
               <Button variant="danger" type="submit">
                 Submit
               </Button>
-              <Button variant="primary" onClick={handleClose}>
+              <Button className="bg-dark" onClick={handleClose}>
                 Close
               </Button>
             </Modal.Footer>
-          </Form>
+          </form>
         </Modal.Body>
       </Modal>
     </>

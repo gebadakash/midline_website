@@ -11,7 +11,7 @@ const OptimiseSection = () => {
     
     const [formData, setFormData] = useState({
 
-        fname:'',
+        username:'',
         email:'',
         contact:'',
         work:'',
@@ -29,9 +29,9 @@ const handleSubmit = async e =>{
 
     e.preventDefault();
     try {
-        await axios.post('http://localhost:8080/save', formData);
+        await axios.post('http://localhost:3001/save', formData);
         setFormData({
-            fname:'',
+            username:'',
             email:'',
             contact:'',
             work:'',
@@ -81,7 +81,7 @@ return (
                                 <p></p>
                                 <div className="row g-3">
                                     <div className="col-xl-12">
-                                        <input type="text" className="form-control bg-light border-0" name="fname" placeholder="Your Name" value={formData.fname} onChange={handleChange} style={{height: '55px'}} required />
+                                        <input type="text" className="form-control bg-light border-0" name="username" placeholder="Your Name" value={formData.username} onChange={handleChange} style={{height: '55px'}} required />
                                     </div>
                                     <div className="col-12">
                                         <input type="email" className="form-control bg-light border-0" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} style={{height: '55px'}} required />
