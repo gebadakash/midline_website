@@ -1,31 +1,29 @@
 import Footer from "./Components/Footer/Footer";
-import Header from './Components/Header/Header';
-import { Outlet } from 'react-router-dom';
-import "./assets/animate.min.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './index.css';
-import GoToTop from './Components/FixedButtons/GoToTop';
-import FixedButtons from './Components/FixedButtons/FixedButtons';
-import { ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Outlet } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./index.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
-import { Suspense } from "react";
-
+import React, { Suspense } from "react";
+const Header = React.lazy(() => import("./Components/Header/Header"));
+const GoToTop = React.lazy(()=> import ("./Components/FixedButtons/GoToTop"));
+const FixedButtons  = React.lazy(()=> import ("./Components/FixedButtons/FixedButtons"));
 
 const App = () => {
   return (
     <>
-      <Header />
-      <ToastContainer position="top-center"/>
       <Suspense>
-      <Outlet />
+        <Header />
+        <ToastContainer position="top-center" />
+        <Outlet />
+        <FixedButtons />
+        <GoToTop />
+        <Footer />
       </Suspense>
-      <FixedButtons/>
-      <GoToTop/>
-      <Footer />
     </>
-  )
-}
+  );
+};
 
 export default App;

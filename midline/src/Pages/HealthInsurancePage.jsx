@@ -1,9 +1,8 @@
-import { useEffect } from "react";
-import { useGlobalContext } from "../Components/Context/context";
-import PageHeader from "../Components/PageHeader/PageHeader"
-import ProjectDetails from "../Components/ProjectsComponents/ProjectDetails";
-import OptimiseSection from "../Components/ProjectsComponents/OptimiseSection";
-
+import React, { Suspense, useEffect } from "react";
+const useGlobalContext = React.lazy(()=> import ("../Components/Context/context"));
+const PageHeader = React.lazy(()=> import("../Components/PageHeader/PageHeader"));
+const ProjectDetails = React.lazy(()=> import ("../Components/ProjectsComponents/ProjectDetails"));
+const OptimiseSection = React.lazy(()=> import("../Components/ProjectsComponents/OptimiseSection"));
 
 const HealthInsurancePage = () => {
 
@@ -13,9 +12,11 @@ const HealthInsurancePage = () => {
 
   return (
     <>
+    <Suspense>
       <PageHeader/>
       <ProjectDetails/>
       <OptimiseSection/>
+    </Suspense>
     </>
   )
 }

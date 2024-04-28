@@ -120,10 +120,14 @@ const ServiceSection = () => {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="500"
               >
-                {service.icon}
-                <h4>
+              <div className="conatiner icons">
+              {service.icon}
+              </div>
+                <div className="container iconsText">
+                <h4 className="ServiceText">
                   <NavLink className="navlink" to={service.Link}>{service.title}</NavLink>
                 </h4>
+                </div>
                 <p>{service.description}</p>
               </div>
             </div>

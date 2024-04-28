@@ -1,9 +1,10 @@
-import { useEffect } from "react";
-import PageHeader from "../Components/PageHeader/PageHeader"
-import { useGlobalContext } from "../Components/Context/context";
-import Excellence from "../Components/ServicesComponents/Excellence";
-import Service from "../Components/Service/Service";
-import Contact from "../Components/HomeComponents/Contact";
+import React, { Suspense, useEffect } from "react";
+const PageHeader = React.lazy(()=> import("../Components/PageHeader/PageHeader"));
+const Excellence = React.lazy(()=> import("../Components/ServicesComponents/Excellence"));
+const Service = React.lazy(()=> import("../Components/Service/Service"));
+const Contact = React.lazy(()=> import("../Components/HomeComponents/Contact"));
+const useGlobalContext = React.lazy(()=> import ("../Components/Context/context"));
+
 
 const AppointmentSetting = () => {
 
@@ -34,10 +35,12 @@ const AppointmentSetting = () => {
 
   return (
     <>
+    <Suspense>
       <PageHeader/> 
       <Excellence/>  
       <Service serviceItems={AppointmentServices}/> 
       <Contact/>
+    </Suspense>
     </>
   )
 }

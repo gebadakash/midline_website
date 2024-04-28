@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { useGlobalContext } from "../Components/Context/context";
-import PageHeader from "../Components/PageHeader/PageHeader"
-import AboutSection from "../Components/AboutComponents/AboutSection";
-import TimelineComponent from "../Components/AboutComponents/TimelineComponent";
-import CounterComponent from "../Components/AboutComponents/CounterComponent";
+const PageHeader = React.lazy(()=> import("../Components/PageHeader/PageHeader"));
+const AboutSection = React.lazy(()=> import("../Components/AboutComponents/AboutSection"));
+const TimelineComponent = React.lazy(()=> import("../Components/AboutComponents/TimelineComponent"));
+const CounterComponent = React.lazy(()=> import("../Components/AboutComponents/CounterComponent"));
 
 
 const AboutPage = () => {
@@ -16,10 +16,12 @@ const AboutPage = () => {
 
   return (
     <>
+    <Suspense>
       <PageHeader/>
       <AboutSection/>
       <CounterComponent/>
       <TimelineComponent/>
+    </Suspense>
     </>
   )
 }

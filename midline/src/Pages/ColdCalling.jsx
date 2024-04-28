@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import PageHeader from "../Components/PageHeader/PageHeader"
-import { useGlobalContext } from "../Components/Context/context";
-import Excellence from "../Components/ServicesComponents/Excellence";
-import Service from "../Components/Service/Service";
-import GraphicsData from "../Components/ServicesComponents/GraphicsData";
+import React, { Suspense, useEffect } from "react";
+const PageHeader = React.lazy(()=> import("../Components/PageHeader/PageHeader"));
+const useGlobalContext = React.lazy(()=> import ("../Components/Context/context"));
+const Excellence = React.lazy(()=> import("../Components/ServicesComponents/Excellence"));
+const Service = React.lazy(()=> import("../Components/Service/Service"));
+const GraphicsData = React.lazy(()=> import("../Components/ServicesComponents/GraphicsData"));
 
 const ColdCalling = () => {
 
@@ -35,10 +35,12 @@ const ColdCalling = () => {
 
   return (
     <>
+    <Suspense>
       <PageHeader/> 
       <Excellence/>
       <Service serviceItems={ColdCalling}/>
       <GraphicsData/>
+    </Suspense>
     </>
   )
 }

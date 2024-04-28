@@ -81,3 +81,38 @@ section {
 .services .icon-box h4 a:hover {
   text-decoration: underline;
 }
+
+
+@media (max-width:999px) {
+
+  .services .icon-box{
+
+    padding: 10px;
+
+  }
+
+  .services .icon-box p{
+    text-align: justify;
+    margin-left: 0px;
+    padding: 12px;
+  }
+
+  .icons{
+
+    display: flex;
+   justify-content: center;
+  }
+
+  .iconsText{
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .ServiceText{
+
+    margin-left: 0px !important;
+    margin-top: 12px;
+  }
+  
+}
