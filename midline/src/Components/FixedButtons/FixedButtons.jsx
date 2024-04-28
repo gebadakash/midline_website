@@ -1,8 +1,7 @@
 import { BsWhatsapp } from "react-icons/bs";
 import { BiSolidPhoneCall } from "react-icons/bi";
-import chatbot from "../../assets/images/chatbot.gif"
+import chatbot from "../../assets/images/robot.png"
 import "./FixedButtons.css"; 
-import "./FixedButtons.css";
 import { useState } from "react";
 import ChatBot from "react-simple-chatbot";
 
@@ -107,7 +106,7 @@ const FixedButtons = () => {
       </button>
 
       <button onClick={toggleChat} className="fixed-btn Chat-btn">
-        <img src={chatbot} style={{width:"100px", bottom:"50px"}}/>
+        <img src={chatbot} style={{bottom:"10px", position:"relative", right:"16px"}}/>
       </button>
 
       {isOpen && (

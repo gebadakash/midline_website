@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { useEffect } from "react";
-const useGlobalContext = React.lazy(()=> import ("../Components/Context/context"));
+import { useGlobalContext } from "../Components/Context/context";
 const PageHeader = React.lazy(()=> import("../Components/PageHeader/PageHeader"));
 const Contact = React.lazy(()=> import("../Components/HomeComponents/Contact"));
 
