@@ -16,7 +16,7 @@ const TeamSection = () => {
         <div className="row justify-content-center">
           {teamMembers.map((member, index) => (
             <div key={index} className="col-lg-3 col-md-6 d-flex align-items-stretch member-item">
-              <div className="member" data-aos="zoom-in-up" data-aos-duration="2000">
+              <div className="member" data-aos="zoom-in-up" data-aos-duration="500">
                 <div className="member-img">
                   <img src={member.imgSrc} className="img-fluid" alt={member.name} />
                   <div className="social mb-2 d-flex justify-content-center">

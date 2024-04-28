@@ -1,21 +1,20 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import ContactPage from "./Pages/ContactPage.jsx";
-import HealthInsurancePage from "./Pages/HealthInsurancePage.jsx";
-import MedicareSupplement from "./Pages/MedicareSupplement.jsx";
-import B2bGeneration from "./Pages/B2bGeneration.jsx";
-import FinalExpense from "./Pages/FinalExpense.jsx";
-import AboutPage from "./Pages/AboutPage.jsx";
-import Home from "./Pages/HomePage.jsx";
-import { AppProvider } from "./Components/context.jsx";
-import CustomerService from "./Pages/CustomerService.jsx";
-import Sales from "./Pages/Sales.jsx";
-import ColdCalling from "./Pages/ColdCalling.jsx";
-import AppointmentSetting from "./Pages/AppointmentSetting.jsx";
-
+import { AppProvider } from "./Components/Context/context.jsx"
+const Home = lazy(()=> import("./Pages/HomePage.jsx"));
+const ContactPage = lazy(()=> import ("./Pages/ContactPage.jsx"));
+const AboutPage = lazy(()=> import ("./Pages/AboutPage.jsx"));
+const HealthInsurancePage = lazy(()=> import("./Pages/HealthInsurancePage.jsx"));
+const FinalExpense = lazy(()=> import("./Pages/FinalExpense.jsx"));
+const MedicareSupplement = lazy(()=> import ("./Pages/MedicareSupplement.jsx"));
+const B2bGeneration = lazy(()=> import("./Pages/B2bGeneration.jsx"));
+const CustomerService = lazy(()=> import("./Pages/CustomerService.jsx"));
+const Sales = lazy(()=> import("./Pages/Sales.jsx"));
+const ColdCalling = lazy(()=> import("./Pages/ColdCalling.jsx"));
+const AppointmentSetting = lazy(()=> import("./Pages/AppointmentSetting.jsx"));
 
 const router = createBrowserRouter([
   {

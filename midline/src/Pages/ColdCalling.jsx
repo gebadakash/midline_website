@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import PageHeader from "../Components/PageHeader"
-import { useGlobalContext } from "../Components/context"
+import PageHeader from "../Components/PageHeader/PageHeader"
+import { useGlobalContext } from "../Components/Context/context";
 import Excellence from "../Components/ServicesComponents/Excellence";
-import Service from "../Components/Service";
+import Service from "../Components/Service/Service";
 import GraphicsData from "../Components/ServicesComponents/GraphicsData";
 
 const ColdCalling = () => {

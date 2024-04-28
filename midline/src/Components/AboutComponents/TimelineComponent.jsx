@@ -70,7 +70,7 @@ const TimelineComponent = () => {
 
   return (
     <>
-    <div className="section-title serviceTitle position-relative pb-3 mb-2 mt-5">
+    <div className="section-title serviceTitle position-relative pb-3 mb-2 mt-5" style={{display:"flex", justifyContent:"center"}}>
       <h2 className="mb-0 pb-0">Our Process</h2>
     </div>
     <div className="timeline">

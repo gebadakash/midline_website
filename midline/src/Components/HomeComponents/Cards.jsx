@@ -20,7 +20,7 @@ const Cards = () => {
       className="container-fluid py-5"
       data-aos="flip-left"
       data-aos-easing="ease-out-cubic"
-      data-aos-duration="2000"
+      data-aos-duration="500"
       style={{ visibility: "visible" }}
     >
       <div className="container py-5">

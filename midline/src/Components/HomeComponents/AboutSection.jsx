@@ -37,7 +37,7 @@ const AboutSection = () => {
     <section id="about" className="about section-bg mt-5">
       <div className="container">
         <div className="row no-gutters">
-          <div className="content col-xl-5 d-flex align-items-stretch" data-aos="zoom-in" data-aos-duration="1000">
+          <div className="content col-xl-5 d-flex align-items-stretch" data-aos="zoom-in" data-aos-duration="500">
             <div className="content">
               <h3>Expert in Call Center Services</h3>
               <p className='aboutSectionPara'>
@@ -50,7 +50,7 @@ const AboutSection = () => {
             <div className="icon-boxes d-flex flex-column justify-content-center">
               <div className="row">
                 {iconBoxes.map((box, index) => (
-                  <div key={index} className="col-md-6 icon-box" data-aos="zoom-in" data-aos-duration="1000">
+                  <div key={index} className="col-md-6 icon-box" data-aos="zoom-in" data-aos-duration="500">
                     <box.icon style={{fontSize:"40px", color:"#e03a3c", marginBottom:"10px"}}/>
                     <h4>{box.title}</h4>
                     <p>{box.description}</p>

@@ -1,7 +1,7 @@
 import AboutSection from "../Components/HomeComponents/AboutSection"
 import CarouselSection from "../Components/HomeComponents/CarouselSection"
-import TeamSection from "../Components/HomeComponents/TeamSection"
-import Projects from "../Components/HomeComponents/Projects"
+// import TeamSection from "../Components/HomeComponents/TeamSection"
+// import Projects from "../Components/HomeComponents/Projects"
 import ServiceSection from "../Components/HomeComponents/ServiceSection"
 import Partners from "../Components/HomeComponents/Partners"
 import CountsSection from "../Components/HomeComponents/CountsSection"
@@ -15,10 +15,10 @@ const Home = () => {
         <CarouselSection/>
         <AboutSection/>
         <CountsSection/>
-        <Projects/>
+        {/* <Projects/> */}
         <ServiceSection/>
         <Cards/>
-        <TeamSection/>
+        {/* <TeamSection/> */}
         <Contact/>
         <Partners/>
     </>

@@ -95,7 +95,7 @@ const Projects = () => {
 
   return (
     <section id="tabs" className="tabs">
-      <div className="container" data-aos="zoom-in" data-aos-duration="2000">
+      <div className="container" data-aos="zoom-in" data-aos-duration="500">
         <div
           className="text-center mx-auto pb-5 wow fadeIn"
           data-wow-delay=".3s"

@@ -118,7 +118,7 @@ const ServiceSection = () => {
                 className="icon-box"
                 data-aos="flip-up"
                 data-aos-easing="ease-out-cubic"
-                data-aos-duration="1000"
+                data-aos-duration="500"
               >
                 {service.icon}
                 <h4>

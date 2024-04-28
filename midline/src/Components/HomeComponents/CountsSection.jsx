@@ -48,7 +48,7 @@ const CountBox = ({ icon, count, text }) => {
 },[]);
 
   return (
-    <div className="col-lg-3 col-md-6" data-aos="flip-left" data-aos-duration="2000">
+    <div className="col-lg-3 col-md-6" data-aos="flip-left" data-aos-duration="500">
       <div className="count-box">
         {/* Applied inline style to the icon */}
         <div style={iconStyle}>

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useGlobalContext } from "../Components/context";
-import PageHeader from "../Components/PageHeader";
+import { useGlobalContext } from "../Components/Context/context";
+import PageHeader from "../Components/PageHeader/PageHeader"
 import Contact from "../Components/HomeComponents/Contact";
 
 const ContactPage = () => {

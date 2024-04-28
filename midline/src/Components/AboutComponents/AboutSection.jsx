@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import "./AboutSection.css";
+import AboutUsImage from "../../assets/images/about-2.jpg";
 
 const AboutSection = () => {
 
@@ -48,7 +49,7 @@ const AboutSection = () => {
               </div>
               <div className="col-lg-5 mt-sc" style={{ minHeight: "500px" }}>
                 <div className="position-relative imageSection h-100">
-                  <img alt="About us" className="position-absolute w-100 h-100 rounded"  data-aos="fade-up" src="images/about-2.jpg" style={{ objectFit: "contain", visibility: "visible"}} />
+                  <img alt="About us" className="position-absolute w-100 h-100 rounded"  data-aos="fade-up" src={AboutUsImage} style={{ objectFit: "contain", visibility: "visible"}} />
                 </div>
               </div>
             </div>

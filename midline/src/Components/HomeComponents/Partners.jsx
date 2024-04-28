@@ -1,17 +1,21 @@
 import "./Partners.css";
+import client4 from "../../assets/images/client-4.png";
+import client1 from "../../assets/images/client-1.jpg";
+import client2 from "../../assets/images/client-2.jpg";
+import client3 from "../../assets/images/client-3.jpg";
 
 const Partners = () => {
   const partnersData = [
-    { name: "VIP Response", imgSrc: "images/client-1.jpg" },
-    { name: "Digital Media Solutions", imgSrc: "images/client-3.jpg" },
-    { name: "Jenlin System", imgSrc: "images/client-2.jpg" },
-    { name: "clickDealer", imgSrc: "images/client-4.png" },
+    { name: "VIP Response", imgSrc: `${client1}` },
+    { name: "Digital Media Solutions", imgSrc: `${client3}` },
+    { name: "Jenlin System", imgSrc: `${client2}` },
+    { name: "clickDealer", imgSrc: `${client4}` },
   ];
 
   return (
     <>
       <div className="container section-padding-80-50">
-        <div className="container" data-aos="flip-up" data-aos-duration="3000">
+        <div className="container" data-aos="flip-up" data-aos-duration="500">
           <div className="row">
             <div className="col-12">
               <div

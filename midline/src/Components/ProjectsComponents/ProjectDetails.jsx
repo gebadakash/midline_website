@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../Components/Context/context";
 
 
 const ProjectDetails = () => {

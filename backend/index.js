@@ -1,23 +1,60 @@
-const express = require("express")
-const mongoose = require('mongoose')
-const cors = require('cors')
-const UserModel = require("./models/users")
+const express = require("express");
+const mysql = require('mysql2');
+const cors = require('cors');
 
-const app = express()
+const app = express();
 
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
-mongoose.connect("mongodb://127.0.0.1:27017/users");
+// MySQL Connection
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'jtavlssx_midlinesmedia'
+});
 
-app.post('/save', (req, res)=> {
+connection.connect((err) => {
+    if (err) {
+        console.error('Error connecting to MySQL: ' + err.stack);
+        return;
+    }
+    console.log('Connected to MySQL database as id ' + connection.threadId);
+});
 
-    UserModel.create(req.body)
-    .then(users => res.json(users))
-    .catch(err => res.json(err))
+// MySQL Schema
+const createUserTable = `CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255),
+    email VARCHAR(255),
+    subject VARCHAR(255),
+    message TEXT,
+    contact VARCHAR(255),
+    work VARCHAR(255)
+)`;
 
-})
+connection.query(createUserTable, (err, results) => {
+    if (err) throw err;
+    console.log("Users table created successfully");
+});
 
-app.listen(3001, () => {
-    console.log("server is running")
-})
+// Endpoint to save user data
+app.post('/save', (req, res) => {
+    const { username, email, subject, message, contact, work } = req.body;
+    const insertUserQuery = `INSERT INTO users (username, email, subject, message, contact, work) VALUES (?, ?, ?, ?, ?, ?)`;
+    connection.query(insertUserQuery, [username, email, subject, message, contact, work], (err, results) => {
+        if (err) {
+            console.error('Error saving user data: ' + err);
+            res.status(500).json({ error: 'Error saving user data' });
+            return;
+        }
+        res.json({ message: 'User data saved successfully' });
+    });
+});
+
+// Start the server
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});

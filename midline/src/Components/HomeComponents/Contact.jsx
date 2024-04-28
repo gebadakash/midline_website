@@ -38,7 +38,7 @@ const Contact = () => {
     const { username, email, subject, message } = contact;
   
     try {
-      const result = await axios.post('http://localhost:3001/save', { username, email, subject, message });
+      const result = await axios.post('https://midlinesmedia.com/backend/save', { username, email, subject, message });
       console.log(result);
       toast.success("Thanks for choosing us! Our team will contact you soon.");
       setContact({
@@ -55,10 +55,12 @@ const Contact = () => {
   
 
   return (
-    <section id="contact" className="contact">
-      <div className="container aos-animate" data-aos="zoom-out-left" data-aos-duration="2000">
+    <section id="contact" className="contact mt-5">
+      <div className="container aos-animate" data-aos="zoom-out-left" data-aos-duration="500">
         <div className="section-title">
-          <h2>Contact</h2>
+        <div className="container" style={{display:"flex", justifyContent:"center"}}>
+        <h2>Contact</h2>
+        </div>
           <p>Contact us for any inquiries or assistance. We're here to help you navigate through any challenges and provide the support you need for a smooth experience.</p>
         </div>
 

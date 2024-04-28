@@ -1,9 +1,8 @@
-
 import { useState } from "react";
 import { FaSquarePhone } from "react-icons/fa6";
 import axios from 'axios';
 import {toast} from 'react-toastify';
-
+import formImage from "../../assets/images/c2c_bg1.jpg";
 
 
 const OptimiseSection = () => {
@@ -29,7 +28,7 @@ const handleSubmit = async e =>{
 
     e.preventDefault();
     try {
-        await axios.post('http://localhost:3001/save', formData);
+        await axios.post('https://midlinesmedia.com/backend/save', formData);
         setFormData({
             username:'',
             email:'',
@@ -46,7 +45,7 @@ const handleSubmit = async e =>{
 
 
 return (
-    <div className="container-fluid bg-registration py-5 mt-5 mb-5" id="call" style={{marginTop: '-100px', backgroundImage: 'url(images/c2c_bg1.jpg)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+    <div className="container-fluid bg-registration py-5 mt-5 mb-5" id="call" style={{marginTop: '-100px', backgroundImage: `url(${formImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
         <div className="container-fluid py-5" data-aos="fade-up" data-aos-delay="100">
             <div className="container py-5">
                 <div className="row g-5">
