@@ -106,7 +106,7 @@ const FixedButtons = () => {
       </button>
 
       <button onClick={toggleChat} className="fixed-btn Chat-btn">
-        <img src={chatbot} style={{bottom:"10px", position:"relative", right:"16px"}}/>
+        <img src={chatbot} style={{bottom:"10px", position:"relative", right:"16px", width:"70px"}}/>
       </button>
 
       {isOpen && (
